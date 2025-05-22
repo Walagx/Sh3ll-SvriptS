@@ -12,4 +12,4 @@ read OPINION
 
 sleep 1
 
-echo "School is" $OPINION
+echo "School is $OPINION"
