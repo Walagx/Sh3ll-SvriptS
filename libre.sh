@@ -1,17 +1,17 @@
 #!/bin/bash
 
-echo "This shell script removes ALL libreoffice packages"
-sleep 1
-read -p "Do you wish to continue (y/n)" ANSWER
+echo "This script deletes ALL libreoffice packages"
+sleep 1.5
+read -p "Do you wish to continue? (y/n)" ANSWER
 
-if [[ "$ANSWER" == "y" || "$ANSWER" == "Y" ]]; then
-	echo "Updating Package list..."
-	sudo apt update > /dev/null 2>&1
-	echo "Removing Packages..."
+if [[ $ANSWER == "y" || $ANSWER == "Y" ]]; then
+	echo "Updating package list..."
+	sudo apt update > /dev/null 2>&1	
+	echo "Remove libreoffice packages..."
 	sudo apt-get remove --purge "libreoffice*" > /dev/null 2>&1
 	sudo apt-get clean > /dev/null 2>&1
 	sudo apt-get autoremove > /dev/null 2>&1
-	echo "All libre packages have been removed :D"
+	echo "All libreoffice packages have been removed :D"
 else
-	echo "Operation Canceled"
+    echo "Operation Cancelled"
 fi
