@@ -15,7 +15,6 @@ if [ ! -f $injectpath ]; then
 fi
 
 sleep 1
-
 echo "Type the text you want to inject"
 read inject
 
