@@ -1,3 +1,9 @@
-#ignore the usless scripts
+#ignore the useless scripts
 username.sh
+
+#ignore my personal scripts
 dl-walag.sh
+
+#ignore testing junk
+test.txt
+
