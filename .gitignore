@@ -8,3 +8,6 @@ dl-walag.sh
 #ignore testing junk
 test.txt
 
+#ignore scripts I didn't make
+not mine/
+
