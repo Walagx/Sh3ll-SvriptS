@@ -23,7 +23,17 @@ echo -e "\e[32m[+]\e[36m CONFIGURING DEFAULT GIT BRANCH\e[0m"
 echo -e "\e[35mType the default branch name, default is main\e[0m"
 read branch
 git config --global init.default branch $branch
-echo "Branch has been configured to \e[33m$branch"
+echo -e "\e[32mBranch has been configured to \e[33m$branch"
 
 sleep 0.5
+
+# Configures the tokens
+echo -e "\e[32m[+]\e[36m CONFIGURING CREDINETLS"
+echo -e "\e[35mWould you like your token to be stored in ~/.git-credentials?"
+read -p "(y/n): " tokenstore
+if [[ $tokenstore == "y" || $tokenstore == "Y" ]]; then
+	git config --global credential.helper store
+	echo -e "\e[32mToken will be stored once you make a push\e[0m"
+fi
+
 

@@ -2,8 +2,8 @@
 username.sh
 
 #ignore my personal scripts
-#donte use these
 dl-walag.sh
+install.sh
 
 #ignore testing junk
 test.txt
